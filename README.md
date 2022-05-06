@@ -1,1 +1,0 @@
-# GesTick - Mesa de Ayuda
