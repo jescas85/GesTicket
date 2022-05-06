@@ -1,0 +1,48 @@
+/*!------------------------------------------------------------------
+[MAIN STYLESHEET]
+
+Template Name: Constra - Construction Html5 Template
+Description: Constra - Construction Html5 Template
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+[TABLE OF CONTENTS]
+-------------------------------------------------------------------*/
+
+.logo-h img {
+    height: 135px !important;
+}
+
+.header-one .logo-area {
+    padding: 2px 0 !important;
+}
+
+.footer-about img {
+    height: 110px !important;
+    max-height: 110px !important;
+}
+
+.footer-about span.info-box-subtitle {
+    margin: 0;
+    line-height: normal;
+    font-size: 20px;
+    font-weight: 700;
+    color: #f50920;
+}
+
+.img-fluid-services {
+    width: 100% !important;
+    height: 600px !important;
+    
+}
+
+.banner-carousel .banner-carousel-item-2 {
+    height: 580px !important;
+    width: 1300px !important;
+    
+}
+
+.hidden{
+    display: none;
+}
+
+

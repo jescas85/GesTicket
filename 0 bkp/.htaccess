@@ -1,0 +1,34 @@
+#Access-Control-Allow-Origin "*"permite acceder a todos los recursos y recursos web de todos los dominios.
+<IfModule mod_headers.c>
+  <FilesMatch "\.(ttf|ttc|otf|eot|woff|woff2|font.css|css|js)$">
+    Header set Access-Control-Allow-Origin "*"
+  </FilesMatch>
+</IfModule>
+
+<IfModule mod_rewrite.c>
+  # Habilitar URL amigables
+  options All -Indexes
+
+  RewriteEngine On
+  #RewriteCond %{HTTPS} !=on
+  #RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301,NE]
+  #Header always set Content-Security-Policy "upgrade-insecure-requests;"
+  RewriteRule ^([a-zA-Z0-9/-]+)$ index.php?view=$1
+
+  # Mensaje de error personalizado en ubicación local
+  #AllowOverride On
+	ErrorDocument 404 views/contents/errors/404.html
+	ErrorDocument 403 views/contents/errors/403.html
+	ErrorDocument 400 views/contents/errors/400.html
+	ErrorDocument 500 views/contents/errors/500.html
+
+  # Prevenir hotlinking
+  #RewriteEngine on 
+  #RewriteCond %{HTTP_REFERER} !^$
+  #RewriteCond %{HTTP_REFERER} !^http://tu-dominio/.*$ [NC] [OR]
+  #RewriteCond %{HTTP_REFERER} !^http://www.tu-dominio/.*$ [NC] [OR]
+  #RewriteRule .*\.(gif|GIF|jpg|JPG|bmp|BMP|wav|mp3|wmv|avi|mpeg)$ - [F]
+
+</IfModule>
+
+

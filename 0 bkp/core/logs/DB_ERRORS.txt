@@ -1,0 +1,7 @@
+PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'sucursal' cannot be null in D:\Desarrollo\Laragon\www\web_protege\core\MasterPDO.php:99
+Stack trace:
+#0 D:\Desarrollo\Laragon\www\web_protege\core\MasterPDO.php(99): PDOStatement->execute()
+#1 D:\Desarrollo\Laragon\www\web_protege\ajax\ajax_form_contact.php(63): MasterPDO->insert('tickets', Array)
+#2 {main}
+13/10/2021 03:38:12
+-----------
